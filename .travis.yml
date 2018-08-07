@@ -1,10 +1,16 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
-    - node_modules
+  - node_modules
 script:
-  - npm run lint
-  - npm test
-  - npm run build
+- npm run lint
+- npm test
+- npm run build
+deploy:
+  provider: heroku
+  app: build-and-deploy-2018-ole
+  skip_cleanup: true
+  api_key:
+    secure: hrqtGNhn/U2DWfP41TGJ+q5bN6sAAjcNWnPC748CmGo/wWawZ+PWDqIIS5wF0sEC4RzOv6LMy2TQm/R0ZcDtmFy0pMBn68HzEtPQ3i8aZLseI1KnJP0qXj6WhyoIFYloG4S7dmJH0hWVUEltMp3Fm63+tEXEzuNjsOe3d6kHuAXNQNYvYcbLWUTdq6ASPNX2Qdlyh9oj9WyV/QgDHo9F4TtQWJEHAJ2I+qD+1g+ZCsEgaQjgQwbpb18KDuJ6Y5se+tLnFJwyNVvMJgV9aCUpTNlOdezEdyj8+lg5dKiMmxtPTaRWLvQjYKV8xfHh1pUDd3Ee5Qo62uChfkqS/apeSLI3hN1R+TF0hcvtMYGIGtlzdrbz9SdTskMJDsGxc+arTxv4z/Ax70tmxCJED0SZWGNNeHKeU5pjvN6T9rmy3hmMpA6KykEpWwvBsTMf+DAwBzWSrgcDkaAdMCEJurQtpF73tMU/u6pKgYJwL/BCu4VJDdn0dc8+NUolEJ14hIjutXQwKE5ljLeOv1mRgTBjfBXI1DcTpqcOdgW28HKZXeFo8CwB+iwEiEXCziF1/ogFUlShgUHY742DIlYLwMEtkgePqrTtriItj7NkR/LXTvyCwvTOBPl/kYMQcUkvKrPdmGRZfQv3LxWqF42UV8TL3/hPqoxuP7i6F01Ifp6iNsw=
